@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AppHealth</title>
+
+  </head>
+  <body>
+    <main id="contenido"></main>
+
+<script>
+
+  window.addEventListener("DOMContentLoaded", () => {
+    fetch("router.php?page=bankScreen")
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById("contenido").innerHTML = html;
+        import('./public/src/js/bank.js');
+        import('./public/src/js/bankLogin.js');
+      })
+      .catch(err => {
+        document.getElementById("contenido").innerHTML = "<p>Error al cargar la vista</p>";
+        console.error(err);
+      });
+  });
+
+</script>
+  </body>
+</html>
