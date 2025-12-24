@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Medical Solutions</title>
+    <link rel="stylesheet" href="public/css/contactUs.css">
+
+</head>
+<body>
+    <div class="contact-container">
+        <!-- Left side - Contact Information -->
+        <div class="contact-info">
+            <p class="subtitle">WE'RE HERE TO HELP YOU</p>
+            <h1 class="main-title">
+                Discuss Your <br>
+                Medical <br>
+                Solution Needs
+            </h1>
+            <p class="description">
+                Are you looking for top-quality medical solutions tailored<br>
+                to your needs? Reach out to us.
+            </p>
+
+            <div class="contact-details">
+                <div class="contact-item">
+                    <div class="icon-wrapper email-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="4" width="20" height="16" rx="2"/>
+                            <path d="m2 7 10 7 10-7"/>
+                        </svg>
+                    </div>
+                    <div class="contact-text">
+                        <p class="contact-label">E-mail</p>
+                        <p class="contact-value">solutions***@gmail.com</p>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="icon-wrapper phone-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                        </svg>
+                    </div>
+                    <div class="contact-text">
+                        <p class="contact-label">Phone number</p>
+                        <p class="contact-value">+123 - 456 - 7890</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right side - Contact Form -->
+        <div class="form-card">
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" placeholder="Jane Smith" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input type="text" id="phone" placeholder="phone" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="industry">Industry</label>
+                    <select id="industry" required>
+                        <option value="">Select</option>
+                        <option value="healthcare">Healthcare Provider</option>
+                        <option value="hospital">Hospital</option>
+                        <option value="clinic">Clinic</option>
+                        <option value="pharmacy">Pharmacy</option>
+                        <option value="research">Research Institution</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" rows="5" placeholder="Type your message" required></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">
+                    <span>Get a Solution</span>
+                    <div class="arrow-circle">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 12h14"/>
+                            <path d="m12 5 7 7-7 7"/>
+                        </svg>
+                    </div>
+                </button>
+            </form>
+                                                        <nav class="bottom-nav">
+      <a href="/router.php?page=sect1" class="nav-item ">Home</a>
+            <a href="/router.php?page=sect2" class="nav-item">heart</a>
+      <a href="/router.php?page=sect3" class="nav-item">Lungs</a>
+      <a href="/router.php?page=about" class="nav-item">About</a>
+      <a href="/router.php?page=contactUs" class="nav-item active">Contact</a>
+    </nav>
+        </div>
+    </div>
+<script type="module" src="../backend/jss/script.js"></script>
+</body>
+</html>

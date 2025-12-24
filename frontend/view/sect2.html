@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>General Indicators of the Brain</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="public/css/index.css">
+
+
+
+</head>
+
+
+    <script src="https://cdn.botpress.cloud/webchat/v3.4/inject.js"></script>
+<script src="https://files.bpcontent.cloud/2025/12/02/23/20251202234254-093YHHFJ.js" defer></script>
+
+
+<body>
+  <div class="dashboard">
+    <!-- Main Title -->
+    <h1 class="main-title">General indicators of the Brain </h1>
+
+    <!-- Left Column -->
+    <div class="left-column">
+      <!-- My Brain Condition Stats -->
+      <div class="card brain-condition-stats">
+        <div class="card-header">
+          <span class="dot blue"></span>
+          <span class="card-title">My Brain Condition</span>
+        </div>
+        <div class="stats-grid">
+          <div class="stat-item">
+            <span class="stat-value">1.5l</span>
+            <span class="stat-label">blood</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-value">10g</span>
+            <span class="stat-label">Hemoglobin</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-value">50g</span>
+            <span class="stat-label">glucose</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-value">9mm</span>
+            <span class="stat-label">pressure diff</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- My Physiological Parameters -->
+
+      <div class="card physiological-params">
+ 
+        <div class="card-header">
+    
+          <span class="dot blue"></span>
+          <span class="card-title">My Physiological Parameters</span>
+        </div>
+        <div class="params-grid">
+          <div class="param-box">
+            <div class="param-icon temp-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2">
+                <path d="M14 4v10.54a4 4 0 1 1-4 0V4a2 2 0 0 1 4 0Z"/>
+              </svg>
+            </div>
+            <span class="param-label">Temperature</span>
+            <span class="param-value large">36.6°C</span>
+          </div>
+          <div class="param-box">
+            <div class="param-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2">
+                <path d="M12 2v20M2 12h20"/>
+              </svg>
+            </div>
+            <span class="param-label">Sleep time</span>
+<div id="chart"> </div>
+            <span class="sleep-hours">8 <small>hours</small></span>
+          </div>
+          <div class="param-box">
+            <div class="param-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M12 6v6l4 2"/>
+              </svg>
+            </div>
+            <span class="param-label">Blood pressure</span>
+            <div class="pressure-labels">
+              <span>Sys pressure</span>
+              <span>Dia pressure</span>
+            </div>
+            <div class="pressure-wave">
+              <svg viewBox="0 0 100 30" preserveAspectRatio="none">
+                <path d="M0,15 Q10,15 15,10 T25,15 T35,5 T45,15 T55,15 T65,10 T75,15 T85,20 T100,15" 
+                      fill="none" stroke="#3b82f6" stroke-width="1.5"/>
+              </svg>
+            </div>
+</div>
+          <div class="param-box pulse-box">
+            <div class="param-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2">
+                <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+              </svg>
+            </div>
+            <span class="param-label">Pulse</span>
+            <div class="pulse-display">
+              <span class="pulse-value">65</span>
+              <span class="pulse-unit">bpm</span>
+            </div>
+            <div class="pulse-indicator"></div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Cards -->
+      <div class="card bottom-section">
+        <div class="card-header">
+          <span class="dot blue"></span>
+          <span class="card-title">My Brain Condition</span>
+          <div class="doctor-badges">
+            <div class="doctor-badge">
+               <img src="public/assets/doctor.png?height=32&width=32" alt="Doctor">
+              <span>Doctor<br>Rodriguez</span>
+            </div>
+          </div>
+        </div>
+        <div class="bottom-cards-grid">
+          <!-- Full Brain MRI -->
+          <div class="bottom-card mri-card">
+            <h4>Full Brain</h4>
+            <p class="card-subtitle">MRI</p>
+              <div class="mri-grid">
+              <img src="public/assets/brain1.png" alt="MRI 1" class="mri">
+               <img src="public/assets/brain3.png" alt="MRI 2" class="mri">
+                <img src="public/assets/brain2.png" alt="MRI 3" class="mri">
+                <img src="public/assets/brain1.png" alt="MRI 4" class="mri">
+                        <img src="public/assets/brain3.png" alt="MRI 3" class="mri">
+                      <img src="public/assets/brain2.png" alt="MRI 3" class="mri">
+            </div>
+            <a href="/router.php?page=results" class="see-results-btn">See results</a>
+            <div class="mri-progress">
+
+              <svg width="24" height="24" viewBox="0 0 36 36">
+
+                <circle cx="18" cy="18" r="15" fill="none" stroke="#e5e7eb" stroke-width="3"/>
+
+                <circle cx="18" cy="18" r="15" fill="none" stroke="#3b82f6" stroke-width="3" 
+                        stroke-dasharray="30 100" stroke-linecap="round" transform="rotate(-90 18 18)"/>
+
+              </svg>
+
+            </div>
+          </div>
+
+          <!-- Full Blood Test -->
+          <div class="bottom-card blood-card">
+
+            <h4>Full Blood</h4>
+            <p class="card-subtitle">Test</p>
+            <div class="blood-progress">
+              <svg width="80" height="80" viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="40" fill="none" stroke="#e5e7eb" stroke-width="8"/>
+                <circle cx="50" cy="50" r="40" fill="none" stroke="#3b82f6" stroke-width="8" 
+                        stroke-dasharray="200 251" stroke-linecap="round" transform="rotate(-90 50 50)"/>
+              </svg>
+              <span class="progress-text">Done testing</span>
+            </div>
+          </div>
+
+          <!-- Visit Cardiologist -->
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Center Brain Image -->
+    <div class="brain-container">
+      <div class="brain-circle outer"></div>
+      <div class="brain-circle inner"></div>
+
+                 <img src="public/assets/lungsWeb.png" alt="Doctor" class="Brain">
+
+      <!-- Annotation markers -->
+      <div class="marker marker-1"></div>
+      <div class="marker marker-2"></div>
+      <div class="marker marker-3"></div>
+      <div class="marker marker-4"></div>
+      <div class="marker marker-5"></div>
+    </div>
+
+    <!-- Right Column -->
+    <div class="right-column">
+      <!-- Patient Card -->
+      <div class="card patient-card">
+        <div class="card-header">
+          <span class="dot red"></span>
+          <span class="card-title">Patients</span>
+        </div>
+        <div class="patient-list">
+          <div class="patient-item active ">
+            <img src="public/assets/woman1.png" alt="Jason">
+            <div class="patient-info">
+              <span class="patient-name">Alice Miller</span>
+            </div>
+  <div class="form-check">
+  <input class="form-check-input" type="checkbox" value="" id="checkDefault">
+</div>
+
+
+          </div>
+          <div class="patient-item">
+            <img src="public/assets/man1.png" alt="Patient">
+            <div class="patient-info">
+              <span class="patient-name">Jhordan Wilson</span>
+            </div>
+  <div class="form-check">
+  <input class="form-check-input" type="checkbox" value="" id="checkDefault">
+</div>
+
+
+          </div>
+          <div class="patient-item">
+           <img src="public/assets/woman3.png" alt="Patient">
+            <div class="patient-info">
+              <span class="patient-name">Ana Gonzalez</span>
+            </div>
+  <div class="form-check">
+  <input class="form-check-input" type="checkbox" value="" id="checkDefault">
+
+</div>
+
+
+
+          </div>
+        </div>
+      </div>
+
+      <!-- My Schedule Card -->
+      <div class="card schedule-card">
+        <div class="card-header">
+          <span class="dot blue"></span>
+          <span class="card-title">My Schedule</span>
+        </div>
+        <div class="schedule-list">
+          <div class="schedule-item">
+            <div class="schedule-icon blue-bg">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                <line x1="16" y1="2" x2="16" y2="6"/>
+                <line x1="8" y1="2" x2="8" y2="6"/>
+                <line x1="3" y1="10" x2="21" y2="10"/>
+              </svg>
+            </div>
+            <div class="schedule-info">
+              <span class="schedule-title">Next Checkup</span>
+              <span class="schedule-date">Fri, 20 Apr</span>
+            </div>
+          </div>
+          <div class="schedule-item">
+            <div class="schedule-icon yellow-bg">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                <line x1="16" y1="2" x2="16" y2="6"/>
+                <line x1="8" y1="2" x2="8" y2="6"/>
+                <line x1="3" y1="10" x2="21" y2="10"/>
+              </svg>
+            </div>
+            <div class="schedule-info">
+              <span class="schedule-date">06-April-01</span>
+            </div>
+          </div>
+          <div class="schedule-item">
+             <div class="schedule-avatar">
+            <img src="/public/assets/doctora1.png" alt="Dra. Zara Smith">
+            </div>
+            <div class="schedule-info">
+              <span class="schedule-title">Dra. Alexandra Smith</span>
+            </div>
+          </div>
+        </div>
+        <button class="consult-btn">Consult Now</button>
+      </div>
+    </div>
+
+
+
+    <!-- Bottom Navigation -->
+                                                        <nav class="bottom-nav">
+      <a href="/router.php?page=sect1" class="nav-item ">Home</a>
+            <a href="#" class="nav-item active">heart</a>
+      <a href="/router.php?page=sect3" class="nav-item">Lungs</a>
+      <a href="/router.php?page=about" class="nav-item">About</a>
+      <a href="/router.php?page=contactUs" class="nav-item">Contact</a>
+    </nav>
+  </div>
+  </div>
+</body>
+</html>

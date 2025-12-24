@@ -1,0 +1,1009 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.dashboard {
+  position: relative;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 280px 1fr 260px;
+  gap: 20px;
+}
+
+/* Main Title */
+.main-title {
+  line-height: 1.1;
+  margin-top: 26px;
+  margin-left: 10px;
+  font-size: 42px;
+  font-weight: 700;
+  color: #004dc9;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: start;
+  position: absolute;
+  font-family: "Archivo Black", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.main-title span {
+  color: #64748b;
+}
+
+.Brain {
+  height: 650px;
+  width: 690px;
+  margin-left: 3vh;
+}
+
+.mri-b-sub {
+  font-size: 19px;
+  font-family: "Archivo Black", sans-serif;
+  font-weight: 500;
+  line-height: 1.1;
+  margin-top: 70px;
+  margin-left: 180px;
+  font-size: 42px;
+  color: #004dc9;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: start;
+  position: absolute;
+}
+
+/* Cards */
+.card {
+  background: white;
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04), 0 4px 16px rgba(0, 0, 0, 0.04);
+  margin-bottom: 16px;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.dot.blue {
+  background: #3b82f6;
+}
+
+.dot.red {
+  background: #ef4444;
+}
+
+.card-title {
+  font-size: 12px;
+  font-weight: 600;
+  color: #64748b;
+}
+
+/* Left Column */
+.left-column {
+  grid-column: 1;
+  padding-top: 20px;
+}
+
+/* Brain Condition Stats */
+.brain-condition-stats {
+  padding: 14px;
+  margin-top: 80px;
+}
+
+.mri {
+  width: 40px;
+  height: 40px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-value {
+  display: block;
+  font-size: 18px;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.stat-label {
+  font-size: 9px;
+  color: #94a3b8;
+  text-transform: lowercase;
+}
+
+/* Physiological Parameters */
+.physiological-params {
+  padding: 14px;
+}
+
+.params-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.param-box {
+  background: #f8fafc;
+  border-radius: 12px;
+  padding: 12px;
+  position: relative;
+}
+
+.param-icon {
+  width: 28px;
+  height: 28px;
+  background: white;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.param-label {
+  display: block;
+  font-size: 10px;
+  color: #94a3b8;
+  margin-bottom: 4px;
+}
+
+.param-value {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.param-value.large {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+/* Sleep Bars */
+.sleep-bars {
+  display: flex;
+  gap: 3px;
+  height: 30px;
+  align-items: flex-end;
+  margin: 8px 0;
+}
+
+.sleep-bars .bar {
+  flex: 1;
+  background: #93c5fd;
+  border-radius: 2px;
+  min-width: 6px;
+}
+
+.sleep-hours {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.sleep-hours small {
+  font-size: 10px;
+  font-weight: 400;
+  color: #94a3b8;
+}
+
+/* Blood Pressure */
+.pressure-labels {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.pressure-labels span {
+  font-size: 8px;
+  color: #94a3b8;
+}
+
+.pressure-wave {
+  height: 30px;
+}
+
+.pressure-wave svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* Pulse */
+.pulse-box {
+  position: relative;
+}
+
+.pulse-display {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+}
+
+.pulse-value {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.pulse-unit {
+  font-size: 10px;
+  color: #94a3b8;
+}
+
+.pulse-indicator {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  width: 8px;
+  height: 8px;
+  background: #3b82f6;
+  border-radius: 50%;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.3);
+    opacity: 0.7;
+  }
+}
+
+/* Bottom Section */
+.bottom-section {
+  width: 340px;
+  height: 290px;
+}
+
+#blood-pressure-chart {
+  min-height: 70px;
+  width: 100%;
+  max-width: 90px;
+  overflow: visible;
+}
+
+.doctor-badges {
+  margin-left: auto;
+  display: flex;
+  gap: 8px;
+}
+
+.doctor-badge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #3b82f6;
+  padding: 4px 10px 4px 4px;
+  border-radius: 20px;
+}
+
+.doctor-badge img {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.doctor-badge span {
+  font-size: 8px;
+  color: white;
+  line-height: 1.2;
+}
+
+.bottom-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.bottom-card {
+  background: #f8fafc;
+  border-radius: 12px;
+  width: 150px;
+  height: 60px;
+  position: relative;
+}
+
+.progresss-text {
+  font-size: 6px;
+}
+
+.bottom-card h4 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 2px;
+}
+
+.card-subtitle {
+  font-size: 12px;
+  color: #64748b;
+  font-weight: 500;
+}
+
+/* MRI Card */
+.mri-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+  margin: 20px 0;
+}
+
+.mri-grid img {
+  width: 100%;
+  aspect-ratio: 1;
+
+  border-radius: 6px;
+}
+
+.see-results-btn {
+  background: #3b82f6;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 10px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.mri-progress {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.mri-progress span {
+  font-size: 10px;
+  color: #64748b;
+}
+
+/* Blood Card */
+.blood-card {
+  text-align: center;
+}
+
+.blood-badge {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+
+.badge-number {
+  width: 20px;
+  height: 20px;
+  background: #dbeafe;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: 600;
+  color: #3b82f6;
+}
+
+.blood-progress {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.blood-progress svg {
+  transform: rotate(0deg);
+}
+
+.progress-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 8px;
+  color: #64748b;
+  text-align: center;
+  width: 50px;
+}
+
+/* Cardio Card */
+.cardio-card {
+  position: relative;
+}
+
+#blood-pressure-chart {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  min-height: 100px;
+}
+
+.chart-wrapper {
+  display: block;
+  width: auto;
+}
+
+.cardio-badge {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: white;
+  padding: 4px 8px 4px 4px;
+  border-radius: 16px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.cardio-badge img {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+.cardio-badge span {
+  font-size: 7px;
+  color: #64748b;
+  line-height: 1.2;
+}
+
+.cardio-number {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+}
+
+.ecg-line {
+  margin-top: 20px;
+  height: 40px;
+}
+
+.ecg-line svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* Brain Container */
+.brain-container {
+  grid-column: 2;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 80px;
+  margin-left: 80px;
+}
+
+.brain-circle {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid #cbd5e1;
+}
+
+.brain-circle.outer {
+  width: 450px;
+  height: 450px;
+  border-color: #93c5fd;
+  opacity: 0.5;
+  margin-left: 60px;
+}
+
+.brain-circle.inner {
+  width: 380px;
+  height: 380px;
+  border-color: #bfdbfe;
+  opacity: 0.3;
+  margin-left: 60px;
+}
+
+/* Markers */
+.marker {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background: white;
+  border: 2px solid #94a3b8;
+  border-radius: 50%;
+  z-index: 10;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.marker-1 {
+  top: 25%;
+  left: 40%;
+}
+.marker-2 {
+  top: 35%;
+  right: 25%;
+}
+.marker-3 {
+  top: 50%;
+  left: 35%;
+}
+.marker-4 {
+  bottom: 35%;
+  left: 45%;
+}
+.marker-5 {
+  bottom: 25%;
+  right: 30%;
+}
+
+/* Right Column */
+.right-column {
+  grid-column: 3;
+  padding-top: 20px;
+}
+
+/* Patient Card */
+.patient-card {
+  padding: 14px;
+}
+
+.patient-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.patient-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.patient-item:hover {
+  background: #f8fafc;
+}
+
+.patient-item.active {
+  background: #f8fafc;
+}
+
+.patient-item img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.patient-info {
+  flex: 1;
+}
+
+/* grapics */
+
+.patient-name {
+  font-size: 12px;
+  font-weight: 500;
+  color: #1e293b;
+}
+
+.patient-check {
+  position: relative;
+  width: 17px;
+  height: 17px;
+  background: #ef4444;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+}
+
+.patient-icon {
+  width: 10px;
+  height: 10px;
+  object-fit: contain;
+}
+
+.mri-results {
+  width: 250px;
+  height: 220px;
+  flex-direction: flex-start;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: row;
+  margin-top: 70px;
+}
+
+.btn--patient {
+  position: relative;
+  width: 17px;
+  height: 17px;
+  background-color: #ffffff;
+
+  border-radius: 50%;
+  border-color: #004dc9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+}
+
+.btn--patient:active {
+  background: #ef4444;
+}
+
+/* 1. Contenedor y Label */
+.form-check {
+  display: block;
+  min-height: 1.3rem; /* Altura mínima */
+  padding-left: 1.3em; /* Espacio para el checkbox */
+  margin-bottom: 0.125rem;
+}
+
+.form-check-input {
+  width: 1.3em;
+  height: 1.3em;
+  margin-top: 0.25em;
+  margin-right: 0.5em;
+  float: left;
+  margin-left: -1.5em;
+
+  /* Ocultar el checkbox nativo y crear la apariencia */
+  appearance: none;
+  background-color: #fff; /* Fondo blanco por defecto */
+  border: 1px solid #ced4da; /* Borde gris */
+  border-radius: 0.25em;
+  transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+    box-shadow 0.15s ease-in-out;
+}
+
+/* 2. Estado Marcado (Checked) */
+.form-check-input:checked {
+  background-color: #0d6efd; /* Azul de Bootstrap */
+  border-color: #0d6efd; /* Borde azul */
+
+  /* Icono de check (usando SVG en Bootstrap, aquí simplificado con un background-image) */
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='m6 10 3 3 6-6'/%3e%3c/svg%3e");
+  background-size: 100% 100%;
+}
+
+.checked {
+  background: #095ff3;
+  margin-left: 8px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.mri_dis {
+  margin-top: 170px;
+}
+.mri-row {
+  display: flex;
+  flex-direction: row;
+  row-gap: 6rem;
+  justify-content: center;
+}
+
+.column-left,
+.column-right {
+  display: flex;
+  flex-direction: row;
+  gap: 4rem;
+}
+
+.mri-cnt {
+  margin-top: 150px;
+  background-color: #ffffff;
+}
+.patient-radio {
+  width: 16px;
+  height: 16px;
+  border: 2px solid #e2e8f0;
+  border-radius: 50%;
+}
+
+.layout {
+  display: flex;
+  height: 100vh;
+  background-color: #ffffff;
+}
+
+.mri-gallery {
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 6rem;
+  margin-top: 100px;
+  margin-left: 50px;
+  background-color: #ffffff;
+}
+
+.mri-panel {
+  width: 490px;
+  background-color: #ffffff;
+}
+
+.mri_each {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+}
+
+.list {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  width: 490px;
+  height: 110px;
+  background-color: #ffffff;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.container {
+  flex-direction: column;
+}
+.title {
+  font-size: 17px;
+  margin-top: 25px;
+  margin-left: 19px;
+}
+
+.day {
+  font-size: 15px;
+  margin-top: 8px;
+  margin-left: 19px;
+}
+
+.img-result {
+  width: 79px;
+  height: 70px;
+  margin-top: 20px;
+  margin-left: 29px;
+  border-radius: 10px;
+}
+
+.btn--round {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: radial-gradient(circle at top left, #6fbaff, #4193ff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border: none;
+  transition: background 0.3s ease;
+}
+
+.btn--round:hover {
+  background: radial-gradient(circle at top left, #8fcfff, #4193ff);
+}
+
+.btn--bookmark svg {
+  width: 8px;
+  height: 8px;
+  fill: white;
+}
+
+.container2 {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin: 10px;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5px;
+}
+
+.column__title {
+  font-size: 14px;
+}
+
+.column__day {
+  font-size: 12px;
+}
+
+.all-screen {
+  max-width: 120px;
+  justify-content: end;
+}
+/* Schedule Card */
+.schedule-card {
+  padding: 14px;
+}
+
+.schedule-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.schedule-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.schedule-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.schedule-icon.blue-bg {
+  background: #3b82f6;
+}
+
+.schedule-icon.yellow-bg {
+  background: #fbbf24;
+}
+
+.schedule-avatar img {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.schedule-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.schedule-title {
+  font-size: 12px;
+  font-weight: 500;
+  color: #1e293b;
+}
+
+.schedule-date {
+  font-size: 11px;
+  color: #64748b;
+}
+
+.consult-btn {
+  width: 100%;
+  background: #3b82f6;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.consult-btn:hover {
+  background: #2563eb;
+}
+
+/* Bottom Navigation */
+.bottom-nav {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 40px;
+  background: white;
+  padding: 12px 30px;
+  border-radius: 30px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.nav-item {
+  text-decoration: none;
+  font-size: 13px;
+  color: #c8ccd1;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.nav-item:hover,
+.nav-item.active {
+  color: #004dc9;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .dashboard {
+    grid-template-columns: 250px 1fr 220px;
+  }
+
+  .main-title {
+    font-size: 32px;
+    left: 270px;
+  }
+
+  .brain-image {
+    width: 320px;
+  }
+
+  .brain-circle.outer {
+    width: 380px;
+    height: 380px;
+  }
+
+  .brain-circle.inner {
+    width: 320px;
+    height: 320px;
+  }
+}
+
+@media (max-width: 992px) {
+  .dashboard {
+    grid-template-columns: 1fr;
+    padding-bottom: 80px;
+  }
+
+  .main-title {
+    position: relative;
+    top: 0;
+    left: 0;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .left-column,
+  .right-column {
+    grid-column: 1;
+  }
+
+  .brain-container {
+    grid-column: 1;
+    min-height: 400px;
+    margin-left: 9px;
+  }
+}
